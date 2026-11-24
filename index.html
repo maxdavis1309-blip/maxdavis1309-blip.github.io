@@ -105,6 +105,37 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
 .ppt{width:100%;border-collapse:collapse;font:600 .78rem var(--mono)}.ppt th{color:var(--muted);text-align:left;padding:5px 6px;border-bottom:1px solid var(--line2);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}
 .ppt td{padding:6px;border-bottom:1px solid var(--line);color:#c3d0de}.ppt td.n{color:var(--amber)}.ppt .good{color:var(--green)}.ppt .badc{color:var(--red)}
 .pp-status{font:700 .8rem var(--mono);color:var(--cyan)}
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.case{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff;display:flex;flex-direction:column;gap:12px;transition:transform .25s,box-shadow .25s}
+.case:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(10,20,40,.3)}
+.case .tag{font:700 .72rem var(--mono);letter-spacing:.12em;color:var(--amber);text-transform:uppercase}
+.case h3{margin:0;font-size:1.3rem;letter-spacing:-.02em;line-height:1.25}
+.case dl{margin:0;display:grid;gap:10px}.case dt{font:700 .72rem var(--mono);letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.case dd{margin:2px 0 0;color:#2a313a;font-size:.98rem}.case .res{background:var(--soft);border-radius:12px;padding:12px 14px;font-weight:600}
+@media(max-width:900px){.cases{grid-template-columns:1fr}}
+.flowcard{background:#0c1118;border-radius:18px;padding:22px;color:#dbe6f2;box-shadow:0 24px 60px -20px rgba(10,20,40,.45);display:flex;flex-direction:column;align-items:center;gap:0}
+.fl-tag{font:700 .68rem var(--mono);letter-spacing:.14em;color:#ffb020;margin-bottom:14px;text-align:center}
+.fl-src{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}.fl-src span{font:700 .78rem var(--mono);letter-spacing:.08em;padding:8px 12px;border:1px solid #2b3c50;border-radius:8px;background:#121a24}.fl-src i{font-style:normal;color:#7f93a8}
+.fl-line{width:2px;height:20px;background:linear-gradient(#2b3c50,#ffb020);position:relative;overflow:hidden}
+.fl-line:after{content:"";position:absolute;left:0;top:-8px;width:2px;height:8px;background:#fff;animation:flow 1.8s linear infinite}
+@keyframes flow{to{top:20px}}
+.fl-core{width:100%;text-align:center;padding:12px;border:1px solid #ffb020;border-radius:10px;background:rgba(255,176,32,.08)}.fl-core b{display:block;font:800 1rem var(--mono);color:#fff}.fl-core small,.fo small{display:block;font:600 .72rem var(--mono);color:#8fa3b8;letter-spacing:.03em}
+.fl-outs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;width:100%}
+.fo{padding:10px 12px;border:1px solid #2b3c50;border-radius:10px;background:#121a24;opacity:0;transform:translateY(6px);animation:foin .5s ease forwards;animation-delay:calc(var(--d)*.15s + .3s)}.fo b{display:block;font:800 .9rem var(--mono);color:#4ade80}
+@keyframes foin{to{opacity:1;transform:none}}
+.fl-gate{margin:12px 0 0;font:700 .72rem var(--mono);letter-spacing:.12em;color:#4ade80;text-align:center}
+.fl-foot{margin-top:14px;padding-top:12px;border-top:1px solid #1f2c3b;width:100%;display:grid;gap:6px;font:600 .74rem var(--mono);color:#9fb1c4}.fl-foot .live{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;margin-right:8px;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.fl-line:after,.fl-foot .live{animation:none}.fo{animation:none;opacity:1;transform:none}}
+.plat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pc{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff;display:flex;flex-direction:column;gap:10px;transition:transform .25s,box-shadow .25s}.pc:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(10,20,40,.3)}
+.pc .tag{font:700 .72rem var(--mono);letter-spacing:.12em;color:var(--amber);text-transform:uppercase}.pc h3{margin:0;font-size:1.2rem;letter-spacing:-.02em;line-height:1.25}.pc p{margin:0;color:#2a313a;font-size:.96rem}
+.pc .proof{margin-top:auto;background:var(--soft);border-radius:10px;padding:10px 12px;font:600 .82rem var(--mono);color:#14181d}
+.pc.wide{grid-column:span 3}.pc.wide .proof{margin-top:6px}
+@media(max-width:900px){.plat{grid-template-columns:1fr}.pc.wide{grid-column:auto}}
+nav a{white-space:nowrap}.brand span{white-space:nowrap}
+@media(max-width:760px){nav{gap:12px}nav a{font-size:.88rem}}
+.tl .it ul{margin:6px 0 0;padding-left:18px;color:#4a525d;font-size:.95rem}.tl .it li{margin:2px 0}
 @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:36px}.stats{grid-template-columns:repeat(2,1fr)}.feat,.about,.labs .sim{grid-template-columns:1fr}nav{gap:16px}.steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.tl .it{grid-template-columns:1fr;gap:4px}}
 @media(max-width:520px){header.top{position:static}header.top .wrap{height:auto;padding:10px 16px;flex-direction:column;align-items:flex-start;gap:6px}html{scroll-padding-top:12px}.labs .seg{grid-auto-flow:row}.dro{grid-template-columns:repeat(2,1fr)}}
@@ -115,7 +146,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
 <a class="skip" href="#demo">Skip to the demos</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="#top" aria-label="Max Davis, home"><span class="logo">MD</span><i></i><span>Max Davis</span></a>
-  <nav aria-label="Sections"><a href="#what">What I do</a><a href="#demo">Demos</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+  <nav aria-label="Sections"><a href="#platform">Platform</a><a href="#what">What I do</a><a href="#demo">Demos</a><a href="#about">About</a><a href="#experience">Experience</a><a href="Max_Davis_Resume.pdf">Resume</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <main id="top">
@@ -125,13 +156,23 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
       <p class="eyebrow">MECHANICAL ENGINEER &middot; B.S. APRIL 2027</p>
       <h1>Max Davis</h1>
       <p class="say" aria-live="off">I <b id="typed"></b></p>
-      <p class="lede">I turn drawings into parts and parts into data. From fixtures and CNC programs to inspection automation and shop-floor software, I build the whole path and test it on real production work. The plate on the right is live: click and drag to cut it.</p>
-      <div class="btns"><a class="btn dark" href="#demo">Try the demos &darr;</a><a class="btn" href="https://www.linkedin.com/in/max-davis1309/">LinkedIn</a><a class="btn" href="mailto:maxdavis1309@gmail.com">Email</a></div>
+      <p class="lede">I turn drawings into parts and parts into data. At a precision quartz machining shop I built one internal platform that reads customer prints and produces quotes, first-article packages, CMM programs, and waterjet programs, and watches the shop floor live. Every output has a person reviewing it.</p>
+      <div class="btns"><a class="btn dark" href="#platform">See what I built &darr;</a><a class="btn" href="Max_Davis_Resume.pdf">Resume (PDF)</a><a class="btn" href="https://www.linkedin.com/in/max-davis1309/">LinkedIn</a><a class="btn" href="mailto:maxdavis1309@gmail.com">Email</a></div>
     </div>
-    <div class="cutwrap">
-      <div class="cuthint" id="cuthint">CLICK &amp; DRAG TO CUT</div>
-      <canvas id="cut" height="400" role="img" aria-label="Interactive metal plate. A cutter automatically machines a pocket; click and drag to cut your own path."></canvas>
-      <div class="dro"><div><small>X mm</small><output id="cX">0.000</output></div><div><small>Y mm</small><output id="cY">0.000</output></div><div><small>MODE</small><output id="cM">AUTO</output></div><button id="cReset" type="button">RESET</button></div>
+    <div class="flowcard" role="img" aria-label="Diagram: a customer print and STEP model go into one internal platform that produces a quote, a first-article package, a CMM program and a waterjet program. Human review is built in. Live machine data feeds dashboards, and results are checked against history every night.">
+      <div class="fl-tag">ONE INTERNAL PLATFORM &middot; BUILT AND RUN BY ME</div>
+      <div class="fl-src"><span>CUSTOMER PRINT</span><i>+</i><span>STEP MODEL</span></div>
+      <div class="fl-line"></div>
+      <div class="fl-core"><b>Reads the print</b><small>extracts features and GD&amp;T</small></div>
+      <div class="fl-line"></div>
+      <div class="fl-outs">
+        <div class="fo" style="--d:0"><b>Quote</b><small>costed estimate</small></div>
+        <div class="fo" style="--d:1"><b>FAIR</b><small>balloons + sheet</small></div>
+        <div class="fo" style="--d:2"><b>CMM program</b><small>Zeiss Calypso</small></div>
+        <div class="fo" style="--d:3"><b>Waterjet</b><small>sequenced cuts</small></div>
+      </div>
+      <div class="fl-gate">&#10003; HUMAN REVIEW BUILT IN</div>
+      <div class="fl-foot"><div><i class="live"></i>Live machine and production data &rarr; dashboards</div><div>&#8635; Nightly check against 2,400+ past CMM programs</div></div>
     </div>
   </section>
 </div>
@@ -161,6 +202,44 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
         <h3>Manufacturing software</h3><p>Quoting, scheduling, and shop-floor data tools built on real production data, plus a GPU-based learning loop that checks its own results against historical CMM programs.</p><ul><li>Python</li><li>JavaScript</li><li>Quoting</li><li>Dashboards</li></ul></div>
     </div>
   </section>
+  <section class="s reveal" id="platform" aria-labelledby="pl2">
+    <h2 id="pl2">What I built</h2>
+    <p class="sec-sub">At Quality Quartz Engineering I built and run an internal manufacturing platform. It started with quoting and grew into the tools below. Each one replaces manual steps that used to sit with different people. No customer names, and figures are my own measurements.</p>
+    <div class="plat">
+      <article class="pc"><span class="tag">Quoting</span><h3>A costed estimate from the print</h3>
+        <p>Reads a customer print, extracts the machining features and GD&amp;T, and outputs a costed estimate for complex quartz machining jobs. A person still makes the final call.</p>
+        <div class="proof">Calibrated on 3,900+ past quotes. Extraction tested on 8,500+ prints.</div></article>
+      <article class="pc"><span class="tag">First-article inspection</span><h3>The FAIR package in minutes</h3>
+        <p>Turns a customer print into a balloon overlay and a filled inspection sheet, replacing multi-hour manual steps. Every output is reviewed by a person.</p>
+        <div class="proof">Six-document package: 1&ndash;2 days down to under 20 minutes of review.</div></article>
+      <article class="pc"><span class="tag">CMM</span><h3>CMM programs that learn from history</h3>
+        <p>Generates Zeiss Calypso programs from the print and STEP model. A fine-tuned vision-language model reads prints on a local GPU, and operators use it from the CMM program tab.</p>
+        <div class="proof">Nightly loop checks results against 2,400+ historical CMM programs.</div></article>
+      <article class="pc"><span class="tag">Waterjet</span><h3>Cut sequences that waste less travel</h3>
+        <p>Builds OMAX waterjet programs from the print and STEP model, then optimizes the order of every cut so the head spends its time cutting, not travelling.</p>
+        <div class="proof">51% less rapid travel across 140 real parts.</div></article>
+      <article class="pc"><span class="tag">Live shop data</span><h3>The floor, live, in one place</h3>
+        <p>Joins ERP data and machine/PLC telemetry into live dashboards: the daily tracking report, scrap fallout, machine downtime, and the supervisor shift hand-down. The daily report replaces hand-typed entry.</p>
+        <div class="proof">30+ permission-controlled views.</div></article>
+      <article class="pc"><span class="tag">Trust</span><h3>Built so people can rely on it</h3>
+        <p>Held-out testing against independent truth sources (STEP models, CMM programs, the quote log), human-review gates, data-loss-prevention controls around AI data flows, and local GPU inference so prints stay in-house.</p>
+        <div class="proof">Tested before it is trusted. Reviewed before it is used.</div></article>
+    </div>
+  </section>
+
+  <section class="s reveal" id="work" aria-labelledby="wk2">
+    <h2 id="wk2">Beyond the platform</h2>
+    <p class="sec-sub">Hands-on process work, and the senior design project I am leading now.</p>
+    <div class="plat" style="grid-template-columns:repeat(2,1fr)">
+      <article class="pc"><span class="tag">Fixturing</span><h3>Vacuum plates in place of wax-down setups</h3>
+        <p>Thin precision parts were held with wax, which cost setup time and added handling risk. I designed and built vacuum-plate fixtures where they applied, as part of more than 250 fixtures for milling, turning, inspection, waterjet, and CMM work.</p>
+        <div class="proof">About two hours less setup on those parts.</div></article>
+      <article class="pc"><span class="tag">Senior design</span><h3>Lights-out CNC machining pilot</h3>
+        <p>I lead a four-person University of Cincinnati team, sponsored by Quality Quartz Engineering, working toward eight hours of unattended machining with no operator interventions and no loss in part quality. I own the probing and tool-setting code.</p>
+        <div class="proof">In progress. DMAIC, with weekly sponsor updates.</div></article>
+    </div>
+  </section>
+</div>  </section>
 </div>
 
 <section class="labs" id="demo" aria-label="Interactive demos">
@@ -191,7 +270,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
 
 <div class="labsec" role="group" aria-labelledby="s1h">
 <div class="reveal">
-  <div class="sec-h"><span class="n">SIM 01</span><h2 id="s1h">Cut-sequence optimizer</h2></div>
+  <div class="sec-h"><span class="n">DEMO 02</span><h2 id="s1h">Cut-sequence optimizer</h2></div>
   <p class="sec-p">A cutter has to visit every pierce point. The order decides how much time it spends travelling instead of cutting. Compare the order the points were drawn in against a nearest-neighbour route and a 2-opt improvement of it, then drag any point and watch the routes re-solve.</p>
   <div class="sim">
     <div class="lpanel">
@@ -215,38 +294,9 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
 </div>
 </div>
 
-<div class="labsec" role="group" aria-labelledby="s2h">
-<div class="reveal">
-  <div class="sec-h"><span class="n">SIM 02</span><h2 id="s2h">GD&amp;T position zone</h2></div>
-  <p class="sec-p">A position tolerance is a circular zone, and with the MMC modifier it grows as the hole gets bigger. Drag the measured hole centre (or focus the view and use the arrow keys, Shift for bigger steps) and change the actual hole size to see whether the part passes.</p>
-  <div class="sim">
-    <div class="lpanel">
-      <canvas id="c2" height="420" tabindex="0" role="img" aria-label="Position tolerance zone around the nominal hole centre. Drag the measured centre or use the arrow keys."></canvas>
-      <p class="hint">Scale: the ring is about 0.1 mm across. The hole itself is drawn as a marker, not to scale.</p>
-    </div>
-    <div class="controls">
-      <div><div class="fcf" aria-label="Feature control frame: position, diameter 0.100 at MMC, datums A and B">
-        <span><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 1v20M1 11h20" stroke="currentColor" stroke-width="1.6"/></svg></span>
-        <span id="fcfTol">&empty;0.100 <span id="fcfM" style="border:0;padding:0 0 0 6px">M</span></span><span>A</span><span>B</span></div>
-        <div class="hint" style="margin-top:0">Hole &empty;10.000&ndash;10.100 mm. MMC is the smallest hole (10.000).</div></div>
-      <div class="field"><label for="size">Actual hole size <output id="sizeo">10.040</output></label><input id="size" type="range" min="10.000" max="10.100" step="0.001" value="10.040"></div>
-      <div class="field"><div class="lab">Modifier</div>
-        <div class="seg" role="radiogroup" aria-label="Modifier"><label><input type="radio" name="mod" value="rfs"><span>RFS (none)</span></label><label><input type="radio" name="mod" value="mmc" checked><span>MMC</span></label></div></div>
-      <div class="rows" aria-live="polite">
-        <div class="row"><span>Position error</span><b id="g_err">&empty;0.000</b></div>
-        <div class="row"><span>Bonus tolerance</span><b id="g_bonus">0.040</b></div>
-        <div class="row"><span>Allowed zone</span><b id="g_allow">&empty;0.140</b></div>
-      </div>
-      <div class="big" id="g_verdict" role="status">PASS</div>
-      <button class="act" id="g_reset" type="button">Reset point</button>
-    </div>
-  </div>
-</div>
-</div>
-
 <div class="labsec" role="group" aria-labelledby="s3h">
 <div class="reveal">
-  <div class="sec-h"><span class="n">SIM 03</span><h2 id="s3h">Quote sandbox</h2></div>
+  <div class="sec-h"><span class="n">DEMO 03</span><h2 id="s3h">Quote sandbox</h2></div>
   <p class="sec-p">Why does a one-off cost so much more per part than a batch of fifty? Change the part and watch setup and programming spread out as quantity goes up. All coefficients are invented and rounded for illustration. This is not any company's cost model or real pricing.</p>
   <div class="sim">
     <div class="lpanel">
@@ -282,7 +332,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
     <h2 id="ab2">About</h2>
     <div class="about">
       <div>
-        <p>I design fixtures, automate inspection paperwork, and build software that connects the shop floor to the people running it. My co-op rotations have been at precision manufacturers in the Cincinnati&ndash;Dayton area: Quality Quartz Engineering, General Tool Company, and Specialty Manufacturing Solutions.</p>
+        <p>I design fixtures, automate inspection paperwork, and build software that connects the shop floor to the people running it. I have worked at precision manufacturers in the Cincinnati&ndash;Dayton area: Quality Quartz Engineering, General Tool Company, Specialty Manufacturing Solutions, and Avid Manufacturing, a job shop I co-founded.</p>
         <p>I&rsquo;m looking for an entry-level manufacturing or process engineering role in the Cincinnati&ndash;Dayton area, starting after graduation.</p>
       </div>
       <div class="facts">
@@ -295,18 +345,21 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
 
   <section class="s reveal" id="experience" aria-labelledby="ex2">
     <h2 id="ex2">Experience</h2>
-    <p class="sec-sub">Co-op rotations at precision manufacturers in the Cincinnati&ndash;Dayton area.</p>
+    <p class="sec-sub">Precision manufacturers in the Cincinnati&ndash;Dayton area, plus a job shop I co-founded.</p>
     <div class="tl">
-      <div class="it"><div class="when">Dec 2023 &ndash; Jan 2025<br>Apr 2026 &ndash; present</div><div><h3>Manufacturing Engineering Intern &middot; Quality Quartz Engineering</h3><p>Fixturing for high-precision machining, first-article inspection and CMM program automation, quoting and shop-floor software.</p></div></div>
-      <div class="it"><div class="when">Jan &ndash; Apr 2026</div><div><h3>Manufacturing Engineer Co-op &middot; General Tool Company</h3><p>CNC process development and production planning for aerospace components.</p></div></div>
-      <div class="it"><div class="when">2022 &ndash; 2023</div><div><h3>Manufacturing Engineering Intern &middot; Specialty Manufacturing Solutions</h3><p>Mechanical design, CNC programming, and fixture work.</p></div></div>
+      <div class="it"><div class="when">Aug 2026 &ndash; present</div><div><h3>Senior Design Team Lead &middot; Lights-Out CNC Machining Pilot</h3><p>University of Cincinnati team project sponsored by Quality Quartz Engineering. Leading four engineers toward eight unattended machining hours; owner of the probing and tool-setting code.</p></div></div>
+      <div class="it"><div class="when">Dec 2023 &ndash; Jan 2025<br>Apr 2026 &ndash; present</div><div><h3>Manufacturing Engineering Intern &middot; Quality Quartz Engineering</h3><ul><li>Built and run the internal manufacturing platform described above: quoting, FAIR, CMM and waterjet automation, and live shop-floor data.</li><li>Designed and built 250+ fixtures for milling, turning, inspection, waterjet, and CMM work, including vacuum-plate fixturing.</li><li>Developed a machining method for a high-value quartz component that cut machining time substantially.</li></ul></div></div>
+      <div class="it"><div class="when">Jan &ndash; Apr 2026</div><div><h3>Manufacturing Engineer Co-op &middot; General Tool Company</h3><ul><li>Created and maintained about 100 manufacturing routers, work instructions, and process documents for precision aerospace and industrial components.</li><li>Turned drawings, GD&amp;T, and customer requirements into shop-floor instructions; supported tooling, fixture planning, and operation sequencing across difficult materials.</li></ul></div></div>
+      <div class="it"><div class="when">Jan &ndash; Jul 2025</div><div><h3>Co-founder / Manufacturing Consultant &middot; Avid Manufacturing</h3><ul><li>Co-founded and helped launch a precision job shop for complex multi-axis milling and turning.</li><li>Quoted and supported about 50 customer jobs; programmed 5-axis and mill-turn work in Fusion 360; designed fixtures and selected tooling.</li></ul></div></div>
+      <div class="it"><div class="when">May 2022 &ndash; Aug 2023</div><div><h3>Manufacturing Engineering Intern &middot; Specialty Manufacturing Solutions</h3><ul><li>Created part models, drawings, CNC programs, and work instructions; programmed Haas and Okuma machining centers.</li><li>Designed about 25 fixtures for welding, CNC machining, laser marking, and assembly.</li></ul></div></div>
     </div>
+    <p class="statnote" style="margin-top:16px"><a href="Max_Davis_Resume.pdf">Download the full resume (PDF)</a></p>
   </section>
 
   <section class="s reveal" id="contact" aria-labelledby="ct2">
     <h2 id="ct2">Contact</h2>
     <p class="sec-sub">Looking for an entry-level manufacturing or process engineering role in the Cincinnati&ndash;Dayton area. The best way to reach me is email or LinkedIn.</p>
-    <div class="btns"><a class="btn dark" href="mailto:maxdavis1309@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/max-davis1309/">LinkedIn</a></div>
+    <div class="btns"><a class="btn dark" href="mailto:maxdavis1309@gmail.com">Email me</a><a class="btn" href="Max_Davis_Resume.pdf">Resume (PDF)</a><a class="btn" href="https://www.linkedin.com/in/max-davis1309/">LinkedIn</a></div>
   </section>
 </div>
 </main>
@@ -379,75 +432,6 @@ function $$(s){return document.querySelectorAll(s)}
     else{del=false;i=(i+1)%L.length;setTimeout(tick,300)}
   }
   tick();
-})();
-
-/* ---------- HERO: cut the plate ---------- */
-(function(){
-  var cv=$('#cut'); if(!cv) return;
-  var ctx,W,H,PX,PY,PW,PH,plate=document.createElement('canvas'),cutL=document.createElement('canvas'),pc,cc,D=1;
-  var sparks=[],tool={x:0,y:0,on:false},mode='AUTO',auto={pts:[],i:0,hold:0,done:false},pressed=false,last=null,running=true,prev=performance.now(),hint=$('#cuthint');
-  function rr(cx,cy,w,h,r,n){var p=[],k,a,cs=[[cx+w/2-r,cy+h/2-r,0],[cx-w/2+r,cy+h/2-r,90],[cx-w/2+r,cy-h/2+r,180],[cx+w/2-r,cy-h/2+r,270]];cs.forEach(function(c){for(k=0;k<=n;k++){a=(c[2]+90*k/n)*Math.PI/180;p.push([c[0]+r*Math.cos(a),c[1]+r*Math.sin(a)])}});p.push(p[0]);return p}
-  function dens(pts,step){var o=[],i,k;for(i=0;i<pts.length-1;i++){var a=pts[i],b=pts[i+1],d=Math.hypot(b[0]-a[0],b[1]-a[1]),n=Math.max(1,Math.ceil(d/step));for(k=0;k<n;k++)o.push([a[0]+(b[0]-a[0])*k/n,a[1]+(b[1]-a[1])*k/n])}o.push(pts[pts.length-1]);return o}
-  function makePlate(){
-    plate.width=cutL.width=Math.round(W*D);plate.height=cutL.height=Math.round(H*D);
-    pc=plate.getContext('2d');cc=cutL.getContext('2d');pc.setTransform(D,0,0,D,0,0);cc.setTransform(D,0,0,D,0,0);
-    var g=pc.createLinearGradient(PX,PY,PX+PW,PY+PH);g.addColorStop(0,'#c2cad4');g.addColorStop(.5,'#9fa9b6');g.addColorStop(1,'#b3bcc7');
-    pc.fillStyle='#0c1118';pc.fillRect(0,0,W,H);
-    pc.beginPath();rr(PX+PW/2,PY+PH/2,PW,PH,16,10).forEach(function(q,i){i?pc.lineTo(q[0],q[1]):pc.moveTo(q[0],q[1])});pc.fillStyle=g;pc.fill();
-    pc.save();pc.clip();pc.globalAlpha=.10;for(var y=PY;y<PY+PH;y+=2){pc.fillStyle=(y/2%2)?'#fff':'#000';pc.fillRect(PX,y,PW,1)}pc.restore();
-    pc.strokeStyle='rgba(255,255,255,.35)';pc.lineWidth=2;pc.stroke();
-    [[PX+34,PY+34],[PX+PW-34,PY+34],[PX+34,PY+PH-34],[PX+PW-34,PY+PH-34]].forEach(function(h){pc.beginPath();pc.arc(h[0],h[1],11,0,7);pc.fillStyle='#10161e';pc.fill();pc.strokeStyle='#e6ebf1';pc.lineWidth=2;pc.stroke()});
-  }
-  function buildAuto(){
-    auto.pts=[];var cx=PX+PW/2,cy=PY+PH/2,w=PW*.52,h=PH*.42,k=0;
-    while(w>16&&h>16){var ring=dens(rr(cx,cy,w,h,Math.max(3,18-k*6),6),7);ring.forEach(function(p){auto.pts.push(p)});w-=26;h-=26;k++}
-    auto.i=0;auto.hold=0;auto.done=false;
-  }
-  function setup(o){ctx=o.ctx;W=o.w;H=o.h;D=Math.min(window.devicePixelRatio||1,2);PX=18;PY=18;PW=W-36;PH=H-36;makePlate();buildAuto();mode='AUTO';draw()}
-  function cutSeg(a,b){
-    cc.lineCap='round';cc.globalCompositeOperation='destination-over';cc.strokeStyle='rgba(235,240,246,.7)';cc.lineWidth=11;cc.beginPath();cc.moveTo(a.x,a.y);cc.lineTo(b.x,b.y);cc.stroke();
-    cc.globalCompositeOperation='source-over';cc.strokeStyle='#1a222d';cc.lineWidth=7;cc.beginPath();cc.moveTo(a.x,a.y);cc.lineTo(b.x,b.y);cc.stroke();
-    for(var i=0;i<2;i++)sparks.push({x:b.x,y:b.y,vx:(Math.random()-.5)*130,vy:(Math.random()-.8)*110,l:.5+Math.random()*.4});
-  }
-  function inPlate(x,y){return x>PX+8&&x<PX+PW-8&&y>PY+8&&y<PY+PH-8}
-  function hud(x,y){$('#cX').textContent=((x-PX)/PW*120).toFixed(3);$('#cY').textContent=((PY+PH-y)/PH*80).toFixed(3);$('#cM').textContent=mode}
-  function draw(){
-    if(!ctx)return;ctx.clearRect(0,0,W,H);ctx.drawImage(plate,0,0,W,H);ctx.drawImage(cutL,0,0,W,H);
-    ctx.globalCompositeOperation='lighter';
-    sparks.forEach(function(s){ctx.fillStyle='rgba(255,'+Math.round(150+80*s.l)+',40,'+Math.min(1,s.l*1.4)+')';ctx.fillRect(s.x,s.y,2.2,2.2)});
-    if(tool.on){var g=ctx.createRadialGradient(tool.x,tool.y,0,tool.x,tool.y,24);g.addColorStop(0,'rgba(255,255,255,.95)');g.addColorStop(.25,'rgba(255,176,32,.75)');g.addColorStop(1,'rgba(255,176,32,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(tool.x,tool.y,24,0,7);ctx.fill()}
-    ctx.globalCompositeOperation='source-over';
-  }
-  function reset(){cc.clearRect(0,0,W,H);sparks=[];buildAuto();mode='AUTO';tool.on=false;last=null;hint.style.opacity=1;draw()}
-  function tick(now){
-    var dt=Math.min(.05,(now-prev)/1000);prev=now;
-    if(running){
-      sparks=sparks.filter(function(s){s.l-=dt;s.x+=s.vx*dt;s.y+=s.vy*dt;s.vy+=220*dt;return s.l>0});
-      if(mode==='AUTO'&&!auto.done){
-        var budget=dt*230;
-        while(budget>0&&auto.i<auto.pts.length){
-          var tgt={x:auto.pts[auto.i][0],y:auto.pts[auto.i][1]},dx=tgt.x-tool.x,dy=tgt.y-tool.y,dist=Math.hypot(dx,dy);
-          if(!tool.on||dist>60){tool.x=tgt.x;tool.y=tgt.y;tool.on=true;auto.i++;continue}
-          if(dist<=budget){cutSeg(tool,tgt);tool.x=tgt.x;tool.y=tgt.y;budget-=dist;auto.i++}
-          else{var f=budget/dist,mid={x:tool.x+dx*f,y:tool.y+dy*f};cutSeg(tool,mid);tool.x=mid.x;tool.y=mid.y;budget=0}
-        }
-        hud(tool.x,tool.y);if(auto.i>=auto.pts.length){auto.done=true;tool.on=false;$('#cM').textContent='DONE'}
-      }
-      draw();
-    }
-    requestAnimationFrame(tick);
-  }
-  function pos(e){var r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
-  cv.addEventListener('pointerdown',function(e){var p=pos(e);if(!inPlate(p.x,p.y))return;pressed=true;mode='MANUAL';auto.done=true;hint.style.opacity=0;try{cv.setPointerCapture(e.pointerId)}catch(_){}last=p;tool.x=p.x;tool.y=p.y;tool.on=true;hud(p.x,p.y);e.preventDefault()});
-  cv.addEventListener('pointermove',function(e){var p=pos(e);if(!pressed){if(mode!=='AUTO'||auto.done){tool.x=p.x;tool.y=p.y;tool.on=inPlate(p.x,p.y);if(tool.on)hud(p.x,p.y)}return}if(!inPlate(p.x,p.y))return;cutSeg(last,p);last=p;tool.x=p.x;tool.y=p.y;hud(p.x,p.y)});
-  function up(){pressed=false;last=null}
-  cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);cv.addEventListener('pointerleave',function(){if(!pressed&&mode!=='AUTO')tool.on=false});
-  $('#cReset').addEventListener('click',reset);
-  onResize(cv,setup);
-  if(REDUCE){while(auto.i<auto.pts.length){var q={x:auto.pts[auto.i][0],y:auto.pts[auto.i][1]};if(auto.i>0)cutSeg(tool,q);tool.x=q.x;tool.y=q.y;auto.i++}auto.done=true;tool.on=false;sparks=[];$('#cM').textContent='DONE';hint.style.opacity=0;draw()}
-  visible(cv,function(v){running=v&&!REDUCE;prev=performance.now()});
-  requestAnimationFrame(tick);
-  window.__cut={auto:auto};
 })();
 
 /* ---------- DEMO 01: print to part ---------- */
@@ -666,73 +650,6 @@ function $$(s){return document.querySelectorAll(s)}
   visible(cv,function(v){running=v;prev=performance.now()});
   requestAnimationFrame(tick);
   window.__sim1=st;
-})();
-
-/* ---------- SIM 2: GD&T position zone ---------- */
-(function(){
-  var cv=$('#c2'); if(!cv) return;
-  var MMC=10.000, TOL=0.100, R=0.15;
-  var g={size:10.040,mod:'mmc',x:0.031,y:-0.022,drag:false};
-  var ctx,W,H,cx,cy,k;
-  function setup(o){ctx=o.ctx;W=o.w;H=o.h;cx=W/2;cy=H/2;k=(Math.min(W,H)/2-26)/R;draw()}
-  function bonus(){return g.mod==='mmc'?Math.max(0,g.size-MMC):0}
-  function allowed(){return TOL+bonus()}
-  function err(){return 2*Math.hypot(g.x,g.y)}
-  function ok(){return err()<=allowed()+1e-9}
-  function draw(){
-    if(!ctx)return;ctx.clearRect(0,0,W,H);
-    var i,x;
-    // grid ticks every 0.05
-    ctx.lineWidth=1;ctx.strokeStyle='rgba(129,150,171,.16)';
-    for(i=-3;i<=3;i++){x=cx+i*0.05*k;ctx.beginPath();ctx.moveTo(x,10);ctx.lineTo(x,H-10);ctx.stroke();x=cy+i*0.05*k;ctx.beginPath();ctx.moveTo(10,x);ctx.lineTo(W-10,x);ctx.stroke()}
-    ctx.font='600 10px ui-monospace,Menlo,Consolas,monospace';ctx.fillStyle='#8196ab';
-    ctx.fillText('A',W-16,cy-6);ctx.fillText('B',cx+6,18);
-    ctx.fillText('0.05 mm grid',12,H-14);
-    var good=ok(), col=good?'#4ade80':'#ff5d6c';
-    // allowed zone (with bonus)
-    var ra=allowed()/2*k, rb=TOL/2*k;
-    ctx.beginPath();ctx.arc(cx,cy,ra,0,7);ctx.fillStyle=good?'rgba(74,222,128,.08)':'rgba(255,93,108,.06)';ctx.fill();
-    ctx.setLineDash([6,5]);ctx.lineWidth=2;ctx.strokeStyle='#38d2ff';ctx.stroke();ctx.setLineDash([]);
-    // base zone
-    ctx.beginPath();ctx.arc(cx,cy,rb,0,7);ctx.lineWidth=2;ctx.strokeStyle='#ffb020';ctx.stroke();
-    // nominal cross
-    ctx.beginPath();ctx.moveTo(cx-9,cy);ctx.lineTo(cx+9,cy);ctx.moveTo(cx,cy-9);ctx.lineTo(cx,cy+9);ctx.lineWidth=1.5;ctx.strokeStyle='#dbe6f2';ctx.stroke();
-    // measured point
-    var px=cx+g.x*k,py=cy-g.y*k;
-    ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(px,py);ctx.lineWidth=1.5;ctx.strokeStyle=col;ctx.globalAlpha=.6;ctx.stroke();ctx.globalAlpha=1;
-    ctx.beginPath();ctx.arc(px,py,16,0,7);ctx.lineWidth=2.5;ctx.strokeStyle=col;ctx.stroke();
-    ctx.beginPath();ctx.moveTo(px-22,py);ctx.lineTo(px+22,py);ctx.moveTo(px,py-22);ctx.lineTo(px,py+22);ctx.lineWidth=1.2;ctx.stroke();
-    ctx.beginPath();ctx.arc(px,py,3.2,0,7);ctx.fillStyle=col;ctx.fill();
-    // legend
-    ctx.fillStyle='#ffb020';ctx.fillText('base zone Ø'+fmt(TOL,3),12,16);
-    ctx.fillStyle='#38d2ff';ctx.fillText('allowed Ø'+fmt(allowed(),3),12,30);
-    readout();
-  }
-  function readout(){
-    $('#g_err').textContent='Ø'+fmt(err(),3);
-    $('#g_bonus').textContent=fmt(bonus(),3);
-    $('#g_allow').textContent='Ø'+fmt(allowed(),3);
-    var v=$('#g_verdict'),good=ok();v.textContent=good?'PASS':'FAIL';v.className='big '+(good?'ok':'bad');
-    $('#fcfM').style.display=g.mod==='mmc'?'inline':'none';
-  }
-  function setPt(e){
-    var r=cv.getBoundingClientRect();var x=(e.clientX-r.left-cx)/k,y=-(e.clientY-r.top-cy)/k;
-    var m=Math.hypot(x,y);if(m>R-0.005){x*=(R-0.005)/m;y*=(R-0.005)/m}g.x=x;g.y=y;draw();
-  }
-  cv.addEventListener('pointerdown',function(e){g.drag=true;cv.setPointerCapture(e.pointerId);setPt(e);cv.focus();e.preventDefault()});
-  cv.addEventListener('pointermove',function(e){if(g.drag)setPt(e)});
-  cv.addEventListener('pointerup',function(){g.drag=false});cv.addEventListener('pointercancel',function(){g.drag=false});
-  cv.addEventListener('keydown',function(e){
-    var s=(e.shiftKey?0.01:0.002),h=true;
-    if(e.key==='ArrowLeft')g.x-=s;else if(e.key==='ArrowRight')g.x+=s;else if(e.key==='ArrowUp')g.y+=s;else if(e.key==='ArrowDown')g.y-=s;else h=false;
-    if(h){var m=Math.hypot(g.x,g.y);if(m>R-0.005){g.x*=(R-0.005)/m;g.y*=(R-0.005)/m}e.preventDefault();draw()}
-  });
-  cv.style.cursor='crosshair';
-  $('#size').addEventListener('input',function(){g.size=+this.value;$('#sizeo').textContent=fmt(g.size,3);draw()});
-  document.getElementsByName('mod').forEach(function(r){r.addEventListener('change',function(){g.mod=r.value;draw()})});
-  $('#g_reset').addEventListener('click',function(){g.x=0.031;g.y=-0.022;draw()});
-  onResize(cv,setup);
-  window.__gdt=g;
 })();
 
 /* ---------- SIM 3: quote sandbox ---------- */
