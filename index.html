@@ -3,6 +3,8 @@
 <title>Max Davis | Mechanical Engineering, Manufacturing and Automation</title>
 <meta name="description" content="Mechanical engineering student (B.S. April 2027) who designs fixtures, automates inspection, and builds manufacturing software. Interactive demos on invented data.">
 <meta name="color-scheme" content="light">
+<link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="canonical" href="https://maxdavis1309-blip.github.io/">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website"><meta property="og:title" content="Max Davis | Mechanical Engineering, Manufacturing and Automation">
@@ -12,9 +14,12 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Max Davis","url":"https://maxdavis1309-blip.github.io/","sameAs":["https://www.linkedin.com/in/max-davis1309/"],"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Cincinnati"},"knowsAbout":["CNC machining","Fixture design","GD&T","CMM programming","Manufacturing automation"]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='15' text-anchor='middle' fill='%23fff'%3EMD%3C/text%3E%3C/svg%3E">
 <style>
-:root{--bg:#fff;--text:#111418;--muted:#5a6573;--line:#e5e8ec;--soft:#f5f6f8;--ink:#14181d;--amber:#e08a00;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+@font-face{font-family:"Inter";src:url(fonts/InterVariable.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(fonts/JetBrainsMono-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(fonts/JetBrainsMono-Bold.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+:root{--bg:#fff;--text:#111418;--muted:#5a6573;--line:#e5e8ec;--soft:#f5f6f8;--ink:#14181d;--amber:#e08a00;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
 .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
 a{color:inherit}:focus-visible{outline:3px solid #2b6cdf;outline-offset:2px}
 .skip{position:absolute;left:-999px;top:8px;background:#111;color:#fff;padding:8px 12px;border-radius:6px}.skip:focus{left:8px;z-index:99}
@@ -47,8 +52,8 @@ h1{font-size:clamp(3rem,9vw,5.2rem);line-height:.95;margin:0 0 14px;letter-spaci
 .ticker div{display:inline-block;padding:13px 0;animation:tick 38s linear infinite;font:700 .85rem var(--mono);letter-spacing:.08em;color:#46505c}
 .ticker span{margin:0 22px}.ticker span::before{content:"\25C6";color:var(--amber);margin-right:22px}
 @keyframes tick{to{transform:translateX(-50%)}}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:34px 0}
-.stat{border:1px solid var(--line);border-radius:14px;padding:18px 20px}.stat b{display:block;font-size:2rem;letter-spacing:-.03em;line-height:1.1}.stat span{color:var(--muted);font-size:.92rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:34px 0 10px}.statnote{margin:0 0 6px;color:var(--muted);font-size:.86rem}
+.stat{border:1px solid var(--line);border-radius:14px;padding:18px 20px}.stat b{display:block;font-size:2.3rem;font-weight:800;letter-spacing:-.04em;line-height:1.1;font-variant-numeric:tabular-nums}.stat>span{color:var(--muted);font-size:.92rem}.stat b .cu{font:inherit;color:inherit;letter-spacing:inherit}
 section.s{padding:56px 0;border-top:1px solid var(--line)}
 h2{font-size:clamp(1.8rem,5vw,2.5rem);margin:0 0 6px;letter-spacing:-.03em}
 .sec-sub{color:var(--muted);margin:0 0 26px;max-width:48em}
@@ -134,12 +139,15 @@ footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);f
 <div class="ticker" aria-hidden="true"><div><span>FIXTURE DESIGN</span><span>CNC &amp; CAM</span><span>GD&amp;T</span><span>FAIR AUTOMATION</span><span>CMM PROGRAMMING</span><span>QUOTING ENGINES</span><span>SHOP-FLOOR DASHBOARDS</span><span>VISION-LANGUAGE MODELS</span><span>PROCESS DOCUMENTATION</span><span>AS9100 / ISO 9001</span><span>FIXTURE DESIGN</span><span>CNC &amp; CAM</span><span>GD&amp;T</span><span>FAIR AUTOMATION</span><span>CMM PROGRAMMING</span><span>QUOTING ENGINES</span><span>SHOP-FLOOR DASHBOARDS</span><span>VISION-LANGUAGE MODELS</span><span>PROCESS DOCUMENTATION</span><span>AS9100 / ISO 9001</span></div></div>
 
 <div class="wrap">
-  <div class="stats reveal" aria-label="At a glance">
-    <div class="stat"><b>3</b><span>precision manufacturers, from CNC floor to quality lab</span></div>
-    <div class="stat"><b>3,900+</b><span>historical quotes used to calibrate a quoting engine</span></div>
-    <div class="stat"><b>Nightly</b><span>learning loop that checks CMM programs against the shop&rsquo;s own</span></div>
-    <div class="stat"><b>Print &rarr; part</b><span>programs, inspection packages, and dashboards built end to end</span></div>
+  <div class="stats reveal" aria-label="Results from my co-op work">
+    <div class="stat"><b><span class="cu" data-to="250" data-suf="+">250+</span></b><span>fixtures designed and built for milling, turning, inspection, waterjet and CMM work</span></div>
+    <div class="stat"><b><span class="cu" data-to="51" data-suf="%">51%</span></b><span>less rapid travel on waterjet cuts across 140 real parts, from optimized cut sequencing</span></div>
+    <div class="stat"><b>&lt;20 min</b><span>of human review for a six-document customer inspection package that used to take 1&ndash;2 days</span></div>
+    <div class="stat"><b><span class="cu" data-to="8500" data-suf="+">8,500+</span></b><span>prints in the corpus I used to build and test drawing extraction</span></div>
+    <div class="stat"><b><span class="cu" data-to="3900" data-suf="+">3,900+</span></b><span>historical quotes used to calibrate a quoting engine</span></div>
+    <div class="stat"><b><span class="cu" data-to="30" data-suf="+">30+</span></b><span>permission-controlled views in the internal operations platform I built and run</span></div>
   </div>
+  <p class="statnote">Figures come from my own measurements on co-op projects.</p>
 
   <section class="s reveal" id="what" aria-labelledby="w2">
     <h2 id="w2">What I do</h2>
@@ -342,6 +350,17 @@ function $$(s){return document.querySelectorAll(s)}
   var els=$$('.reveal');
   if(REDUCE||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.06});
+  els.forEach(function(e){io.observe(e)});
+})();
+
+/* ---------- count-up ---------- */
+(function(){
+  var els=$$('.cu'); if(!els.length||REDUCE||!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting) return; io.unobserve(e.target);
+    var el=e.target,to=+el.dataset.to,suf=el.dataset.suf||'',t0=performance.now(),D=1200;
+    (function step(now){var k=Math.min(1,(now-t0)/D),v=Math.round(to*(1-Math.pow(1-k,3)));el.textContent=v.toLocaleString('en-US')+suf;if(k<1)requestAnimationFrame(step)})(t0);
+  })},{threshold:0.6});
   els.forEach(function(e){io.observe(e)});
 })();
 
